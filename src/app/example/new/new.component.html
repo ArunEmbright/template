@@ -1,0 +1,14 @@
+
+
+ <div  class="container">
+    <form #form="ngForm" (ngSubmit)="getValues(form)">
+        <h1>form</h1>
+        <div style="margin-left:5px">
+        <input type="text" ngModel name="user" placeholder="enter user name">
+        <input type="text" ngModel name="age" placeholder="enter user age">
+        <input type="text" ngModel name="address" placeholder="enter user address"><br><br>
+        <button>get value</button>
+    </div>
+    </form>
+</div>
+<h4>{{ form.value | json }}</h4>
